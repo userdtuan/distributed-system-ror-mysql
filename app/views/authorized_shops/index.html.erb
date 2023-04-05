@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Authorized shops</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Owner</th>
+      <th scope="col">Product</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody id="authorized_shops">
+  <% @authorized_shops.each do |authorized_shop| %>
+    <tr>
+      <%= render authorized_shop %>
+      <td>
+          <%= link_to "Show", authorized_shop, class:"btn btn-sm btn-primary" %>
+          <%= link_to "Edit", edit_authorized_shop_path(authorized_shop), class:"btn btn-sm btn-secondary" %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to "New shop", new_authorized_shop_path %>

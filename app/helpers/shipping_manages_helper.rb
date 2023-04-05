@@ -1,0 +1,2 @@
+module ShippingManagesHelper
+end

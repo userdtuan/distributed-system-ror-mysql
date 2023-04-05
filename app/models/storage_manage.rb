@@ -1,0 +1,2 @@
+class StorageManage < ApplicationRecord
+end

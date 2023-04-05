@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @authorized_shop %>
+
+<div>
+  <%= link_to "Edit this authorized shop", edit_authorized_shop_path(@authorized_shop) %> |
+  <%= link_to "Back to authorized shops", authorized_shops_path %>
+
+  <%= button_to "Destroy this authorized shop", @authorized_shop, method: :delete %>
+</div>

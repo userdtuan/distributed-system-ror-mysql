@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2023-04-04
+  total_price: 9.99
+  shippingid: 1
+  staffid: 1
+
+two:
+  date: 2023-04-04
+  total_price: 9.99
+  shippingid: 1
+  staffid: 1

@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Bills</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Total Price</th>
+      <th scope="col">Shiping</th>
+      <th scope="col">Staff</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody id="bills">
+  <% @bills.each do |bill| %>
+    <tr>
+      <%= render bill %>
+      <td>
+          <%= link_to "Show", bill, class:"btn btn-sm btn-primary" %>
+          <%= link_to "Edit", edit_bill_path(bill), class:"btn btn-sm btn-secondary" %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to "New bill", new_bill_path %>

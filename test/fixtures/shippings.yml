@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2023-04-04
+  kind_of_shipping: MyString
+  staffid: 1
+  sourceid: 1
+  destinationid: 1
+
+two:
+  date: 2023-04-04
+  kind_of_shipping: MyString
+  staffid: 1
+  sourceid: 1
+  destinationid: 1

@@ -18,8 +18,13 @@ default: &default
   host: 172.17.0.2
 
 development:
-  <<: *default
-  database: pt_1
+  primary:
+    <<: *default
+    database: pt_1
+  secondary:
+    <<: *default
+    database: z_phantan2
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

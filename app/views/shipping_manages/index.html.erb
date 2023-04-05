@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Shipping manages</h1>
+
+<div id="shipping_manages">
+  <% @shipping_manages.each do |shipping_manage| %>
+    <%= render shipping_manage %>
+    <p>
+      <%= link_to "Show this shipping manage", shipping_manage %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New shipping manage", new_shipping_manage_path %>

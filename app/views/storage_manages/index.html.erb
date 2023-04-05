@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Storage manages</h1>
+
+<div id="storage_manages">
+  <% @storage_manages.each do |storage_manage| %>
+    <%= render storage_manage %>
+    <p>
+      <%= link_to "Show this storage manage", storage_manage %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New storage manage", new_storage_manage_path %>

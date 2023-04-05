@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @shipping_manage %>
+
+<div>
+  <%= link_to "Edit this shipping manage", edit_shipping_manage_path(@shipping_manage) %> |
+  <%= link_to "Back to shipping manages", shipping_manages_path %>
+
+  <%= button_to "Destroy this shipping manage", @shipping_manage, method: :delete %>
+</div>

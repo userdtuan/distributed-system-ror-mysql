@@ -1,0 +1,32 @@
+<%= form_with(model: storage_manage) do |form| %>
+  <% if storage_manage.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(storage_manage.errors.count, "error") %> prohibited this storage_manage from being saved:</h2>
+
+      <ul>
+        <% storage_manage.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :storageid, style: "display: block" %>
+    <%= form.number_field :storageid %>
+  </div>
+
+  <div>
+    <%= form.label :productid, style: "display: block" %>
+    <%= form.number_field :productid %>
+  </div>
+
+  <div>
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
