@@ -17,10 +17,18 @@ default: &default
   password: mysqlpw
   host: 172.17.0.2
 
+  # adapter: sqlserver
+  # encoding: utf8
+  # username: sa
+  # password: 123456
+  # host: 192.168.1.9
+  # port: 1444
+
 development:
   primary:
     <<: *default
-    database: pt_1
+    database: z_phantan2
+    # database: COFFEE_MN
   secondary:
     <<: *default
     database: z_phantan2

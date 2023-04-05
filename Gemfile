@@ -12,6 +12,9 @@ gem "sprockets-rails"
 # Use mysql as the database for Active Record
 gem "mysql2", "~> 0.5"
 
+# Use sqlserver as the database for Active Record
+gem "activerecord-sqlserver-adapter"
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
