@@ -2,13 +2,28 @@
 
 <h1>Storages</h1>
 
-<div id="storages">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Capacity</th>
+      <th scope="col">Available capacity</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody id="storages">
   <% @storages.each do |storage| %>
-    <%= render storage %>
-    <p>
-      <%= link_to "Show this storage", storage %>
-    </p>
+    <tr>
+      <%= render storage %>
+      <td>
+          <%= link_to "Show", storage, class:"btn btn-sm btn-primary" %>
+          <%= link_to "Edit", edit_storage_path(storage), class:"btn btn-sm btn-secondary" %>
+      </td>
+    </tr>
   <% end %>
-</div>
-
+  </tbody>
+</table>
 <%= link_to "New storage", new_storage_path %>
+

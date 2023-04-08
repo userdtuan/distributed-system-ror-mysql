@@ -1,14 +1,29 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Shippings</h1>
-
-<div id="shippings">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Kind of shipping</th>
+      <th scope="col">Staffid</th>
+      <th scope="col">Sourceid</th>
+      <th scope="col">Destinationid</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody id="shippings">
   <% @shippings.each do |shipping| %>
-    <%= render shipping %>
-    <p>
-      <%= link_to "Show this shipping", shipping %>
-    </p>
+    <tr>
+      <%= render shipping %>
+      <td>
+          <%= link_to "Show", shipping, class:"btn btn-sm btn-primary" %>
+          <%= link_to "Edit", edit_shipping_path(shipping), class:"btn btn-sm btn-secondary" %>
+      </td>
+    </tr>
   <% end %>
-</div>
-
+  </tbody>
+</table>
 <%= link_to "New shipping", new_shipping_path %>
+

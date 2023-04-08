@@ -25,11 +25,11 @@ default: &default
   # port: 1444
 
 development:
-  primary:
+  kho_1:
     <<: *default
-    database: z_phantan2
+    database: pt_1
     # database: COFFEE_MN
-  secondary:
+  kho_2:
     <<: *default
     database: z_phantan2
 

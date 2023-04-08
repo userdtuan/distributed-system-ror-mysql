@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="<%=products_path%>">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%=authorized_shops_path%>">Authorized Shops</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%=farms_path%>">Farms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%=storages_path%>">Storages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%=staffs_path%>">Staffs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%=shippings_path%>">Shippings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%=bills_path%>">Bills</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        You are in "<%= cookies[:connection] %>"
+      </span>
+        <a class="nav-link" href="<%=pages_home_path%>">Change</a>
+        <a class="nav-link" href="<%=logout_path%>">Logout</a>
+    </div>
+  </div>
+</nav>

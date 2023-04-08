@@ -2,13 +2,28 @@
 
 <h1>Staffs</h1>
 
-<div id="staffs">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Position</th>
+      <th scope="col">Storageid</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody id="staffs">
   <% @staffs.each do |staff| %>
-    <%= render staff %>
-    <p>
-      <%= link_to "Show this staff", staff %>
-    </p>
+    <tr>
+      <%= render staff %>
+      <td>
+          <%= link_to "Show", staff, class:"btn btn-sm btn-primary" %>
+          <%= link_to "Edit", edit_staff_path(staff), class:"btn btn-sm btn-secondary" %>
+      </td>
+    </tr>
   <% end %>
-</div>
-
+  </tbody>
+</table>
 <%= link_to "New staff", new_staff_path %>
+
+

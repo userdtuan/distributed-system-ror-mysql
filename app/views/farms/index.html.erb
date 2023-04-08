@@ -2,13 +2,27 @@
 
 <h1>Farms</h1>
 
-<div id="farms">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Owner</th>
+      <th scope="col">Productid</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody id="farms">
   <% @farms.each do |farm| %>
-    <%= render farm %>
-    <p>
-      <%= link_to "Show this farm", farm %>
-    </p>
+    <tr>
+      <%= render farm %>
+      <td>
+          <%= link_to "Show", farm, class:"btn btn-sm btn-primary" %>
+          <%= link_to "Edit", edit_farm_path(farm), class:"btn btn-sm btn-secondary" %>
+      </td>
+    </tr>
   <% end %>
-</div>
-
+  </tbody>
+</table>
 <%= link_to "New farm", new_farm_path %>

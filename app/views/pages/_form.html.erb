@@ -1,0 +1,15 @@
+  <%= form_tag set_connection_path, method: :get do %>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" name="username">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Set Storage</label>
+    <%= select_tag 'connection', options_for_select([["choose storage"],['kho 1', 'kho_1'], ['kho 2', 'kho_2']]), class:"form-select" %>
+  </div>
+  <%= submit_tag "Change", class:"btn btn-sm btn-primary" %>
+  <% end %>
